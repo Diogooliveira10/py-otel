@@ -21,3 +21,15 @@ build-backend = "poetry.core.masonry.api"
 opentelemetry-distro = "^0.51b0"
 opentelemetry-exporter-otlp = "^1.30.0"
 
+
+[tool.poetry.group.dev.dependencies]
+poethepoet = "^0.32.2"
+
+[tool.poe]
+envfile = '.env'
+
+[tool.poe.tasks.serve]
+shell = 'opentelemetry-instrument uvicorn app.app:app'
+
+[tool.poe.tasks]
+otel-install = 'opentelemetry-bootstrap -a install'
