@@ -16,3 +16,8 @@ dependencies = [
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.otel.dependencies]
+opentelemetry-distro = "^0.51b0"
+opentelemetry-exporter-otlp = "^1.30.0"
+
