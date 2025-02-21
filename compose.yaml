@@ -2,5 +2,5 @@ services:
   otel:
     image: grafana/otel-lgtm
     ports:
-      - 3000:3000 # Acesso ao grafrana
-      - 4317:4317 # otel
+      - 3000:3000 # Acesso ao Grafrana
+      - 4317:4317 # OpenTelemetry Collector (gRPC)
